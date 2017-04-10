@@ -1,0 +1,148 @@
+.menuBar {
+  background-color: #5BC1AF;
+  height: 8rem;
+  position: relative;
+  margin-bottom: 0;
+}
+.menuBar-header {
+  padding-top: 25px;
+}
+
+.menuBar-tagline {
+  float: left;
+} @media (max-width: 1000px)
+{
+  .menuBar-tagline
+  {
+    display: none;
+  }
+}
+
+.menuBar .aligner {
+  float: left;
+  vertical-align: middle;
+}
+
+.menuBar-tagline .tagline {
+  color: #bde6df;
+  vertical-align: -webkit-baseline-middle;
+}
+
+///////////////////////////////////////////////////////////////////
+
+.menuBar-body {
+  margin : 0;
+}
+
+// @media (min-width: 768px) {
+//   .navbar-toggle {
+//       display: none;
+//   }
+// }
+
+
+.menuBar-body .navbar-nav .menu-item {
+  display: inline-flex;
+}  @media (max-width: 1000px)
+{
+  .menuBar-body .navbar-nav .menu-item
+  {
+    display: none;
+  }
+}
+
+.menuBar-body .navbar-nav .dropdown {
+  display: none;
+}   @media (max-width: 1000px)
+{
+  .menuBar-body .navbar-nav .dropdown
+  {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px)
+{
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+  top: 100%;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175)
+  }
+}
+
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #bde6df;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.dropdown-menu>li>a:hover {
+color: white;
+background-color: transparent;
+}
+
+.dropdown-menu>li {
+  padding: 18px 0px 6px 0px;
+}
+
+.menuBar-body .navbar-nav >li>a:focus, .menuBar-body .navbar-nav>li>a:hover {
+  // color: white;
+  color:#3b7d5e;
+}
+.menuBar-body .navbar-nav>li>a {
+
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  // color: #bde6df;
+  //  color:#4c6c67;
+   color:white;
+
+  text-decoration: none;
+  background-color: transparent;
+  // color: rgba(255, 255, 255, 0.6);
+}
+// .menuBar-body .navbar-nav .PostABook {
+// color: rgba(33, 106, 99, 0.95) !important;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///
