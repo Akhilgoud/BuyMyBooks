@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bt-app',
-  template: `
-  <bt-menu></bt-menu>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['app.component.scss'],
 
 })
