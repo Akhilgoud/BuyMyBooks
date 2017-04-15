@@ -7,19 +7,20 @@ import { AccordionModule } from 'ng2-bootstrap/accordion';
 
 import { AppComponent } from './app.component';
 import {MenuModule} from './Menu/menu.module';
-
+import {PostModule} from './Post/post.module'
 @NgModule({
   imports: [
     BrowserModule,
     MenuModule,
-    MaterialModule.forRoot(), 
+    PostModule,
+    MaterialModule.forRoot(),
     AccordionModule.forRoot()
   ],
   bootstrap: [
     AppComponent
   ],
   declarations: [
-    AppComponent  
+    AppComponent
   ]
 })
 export class AppModule {}
