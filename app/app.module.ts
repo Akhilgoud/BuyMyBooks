@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserModule} from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { AccordionModule } from 'ng2-bootstrap/accordion';
@@ -12,6 +12,7 @@ import {displayBooksModule} from './DisplayBooks/displayBooks.module';
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
     AccordionModule.forRoot(),
