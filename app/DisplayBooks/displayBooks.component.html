@@ -6,52 +6,118 @@
     <span><i class="material-icons showHideIcon">keyboard_arrow_left</i></span>
   </span>
   <div class="row">
-    <div class="col-md-2 dbFilterDiv" >
-      <div [@FilterBox]="filterState" class="filterOpts" >
+    <div [@FilterBox]="filterState"  class="col-md-2 dbFilterDiv" [hidden]="filterState == 'out'">
+      <div class="filterOpts" >
         <i class="searchIcon material-icons">search</i>
         <input id="dbSearchBox" type="text" placeholder="E.g  book name, price" class="form-control" />
         <hr class="sb-separator -blue">
       </div>
     </div>
-    <hr class="vrBar" />
-    <div class="col-md-10">
-    </div>
-  </div>
+    <div class="col-md-9">
+      <!-- <pre> {{
+      TotalBooksData | json
+    }}
+  </pre> -->
+  <span *ngFor="let item of TotalBooksData" >
+    <md-card class="displayBooks-card" style="display: inline-grid;">
+      <md-card-header>
+        <!-- <div md-card-avatar class="displayBooks-header-image"></div> -->
+        <md-card-title class="dbText">Book: <span ng-show="item.allinonetype" > {{item.allinonetype}} </span>
+          <span ng-show="item.bookname">{{item.bookname}}</span>
+        </md-card-title>
+        <md-card-subtitle class="dbText"><span>Price:  </span>{{item.price | currency:'INR' :true}} </md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="./Images/Project/Logo.jpg" id="dbCardImg">
+      <!-- <md-card-content class="dbText">
+        <p>
+          <span>Desc: </span>  {{item.description}}
+        </p>
+      </md-card-content> -->
+      <md-card-actions>
+        <button md-button class="dbMoreInfoBtn">More Info</button>
+      </md-card-actions>
+    </md-card>
+  </span>
+
+</div>
+</div>
+
 </div>
 
 
+
 <style>
-  .filterOpts{
-    margin-top: 3%;
-    width:300px;
+
+  .dbText {
+    font-size: large !important;
   }
 
-  @media (max-width: 1000px)
+  .dbMoreInfoBtn {
+    margin-left: 34% !important;
+    background-color: #5bc1af;
+    color: white;
+  }
+
+
+  #dbCardImg {
+    height: 170px;
+    padding: 0px 50px 0px 50px;
+        <!-- width: 100%; -->
+  }
+  .displayBooks-card{
+    margin-left:6%;
+    <!-- background-color: #e9eaec; -->
+  }
+
+  .displayBooks-card {
+      width: 330px;
+  }
+
+  .displayBooks-header-image {
+    background-image: url('assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  <!-- .vrbar {
+  border-left: 1px solid #d0c8c8;
+  width: 0;
+  height: 5000px;
+  padding: 0px;
+} -->
+
+
+.filterOpts{
+  margin-top: 3%;
+  width:300px;
+}
+
+@media (max-width: 1000px)
+{
+  .showHideBtn
   {
-    .showHideBtn
-    {
-      padding-left: 214px !important;
+    padding-left: 214px !important;
 
-    }
   }
+}
 
-  .dbFilterDiv {
-    width: 300px;
-    padding: 0;
-  }
+.dbFilterDiv {
+  height: 1000px;
+  border-right: 1px solid #d0c8c8;
+  width: 260px;
+  padding: 0;
+}
 
-  .dbFilterDiv .showHideBtn {
-    float:right;
-  }
-  .showHideBtn {
-    cursor: pointer;
-    padding-left: 258px;
-    margin-top: 39px;
-    display: inline-flex;
-  }
-  .showHideBtn .showHideIcon {
-    color: rgb(91, 193, 175);
-    font-size: 44px;
-  }
+.dbFilterDiv .showHideBtn {
+  float:right;
+}
+.showHideBtn {
+  cursor: pointer;
+  padding-left: 258px;
+  margin-top: 39px;
+  display: inline-flex;
+}
+.showHideBtn .showHideIcon {
+  color: rgb(91, 193, 175);
+  font-size: 44px;
+}
 
 </style>

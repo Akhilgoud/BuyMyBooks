@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MenuModule,
     MaterialModule.forRoot(),
