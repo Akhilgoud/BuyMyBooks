@@ -7,12 +7,17 @@ import {MdIconModule} from '@angular/material';
 import {MenuComponent} from './menu.component';
 import {PostModule} from '../Post/post.module'
 import {PostComponent} from '../Post/post.component'
+import {displayBooksModule} from '../DisplayBooks/displayBooks.module';
+import {displayBooksComponent} from '../DisplayBooks/displayBooks.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [MaterialModule,
             AccordionModule,
             MdIconModule,
             PostModule,
-            RouterModule.forRoot([{path: 'post' , component : PostComponent }],{useHash : true})],
+            displayBooksModule,
+            FormsModule,
+            RouterModule.forRoot([{path:'',component : displayBooksComponent  },{path: 'post' , component : PostComponent }],{useHash : true})],
   declarations: [
       MenuComponent
   ],

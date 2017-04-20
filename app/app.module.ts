@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { AccordionModule } from 'ng2-bootstrap/accordion';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MenuModule} from './Menu/menu.module';
-import {PostModule} from './Post/post.module'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MenuModule,
-    PostModule,
     MaterialModule.forRoot(),
-    AccordionModule.forRoot()
-  ],
+    AccordionModule.forRoot()],
   bootstrap: [
     AppComponent
   ],

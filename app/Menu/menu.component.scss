@@ -105,10 +105,11 @@ background-color: transparent;
 
 .menuBar-body .navbar-nav >li>a:focus, .menuBar-body .navbar-nav>li>a:hover {
   // color: white;
-  color:#3b7d5e;
+  // color:#3b7d5e;
+  color:rgb(61, 71, 66);
 }
 .menuBar-body .navbar-nav>li>a {
-
+    padding-top: 10px;
   font-size: 16px;
   font-weight: 700;
   text-transform: none;

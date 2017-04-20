@@ -1,0 +1,11 @@
+<div>
+  <h1> Enter  Book Details </h1><br>
+Address :   <input type="text"  name="Address" [(ngModel)]="book.Address"/> <br>
+College :   <input type="text"  name="college" [(ngModel)]="book.college"/> <br>
+Description :   <input type="text"  name="description" [(ngModel)]="book.description"/> <br>
+Edition :   <input type="text" name="edition" [(ngModel)]="book.edition"/> <Br>
+Phone Number :  <input type="text" name="phno" [(ngModel)] = "book.phno"/> <br>
+Pin Code :  <input type="text" name="pincode" [(ngModel)]="book.pincode"/><br>
+Price :  <input type="text" name="price" [(ngModel)]="book.price"/><br>
+  <input type="submit" name = "post" value="post" (click) ="submitPost()"/>
+</div>

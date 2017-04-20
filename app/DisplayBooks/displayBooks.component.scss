@@ -1,0 +1,43 @@
+.dbFilterDiv{
+  margin-left: 4%;
+}
+
+.dbFilterDiv .searchIcon {
+  float: left;
+  line-height: inherit;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+#dbSearchBox {
+  margin-top:0%;
+  border:none;
+  width: 222px;
+  margin-left: 0px;
+  box-shadow: none;
+  font-family: serif;
+  font-size: large;
+}
+#dbSearchBox:focus {
+  border:none;
+  box-shadow: none;
+}
+
+
+//
+//  .dbFilterDiv .sb-search + .sb-separator {
+// margin-bottom: 37px;
+// }
+
+//
+// .dbFilterDiv .sb-separator.-blue {
+// background-color: #4eb7f5;
+// }
+
+.dbFilterDiv .sb-separator {
+width: 222px;
+margin-left: 0px;
+height: 1px;
+background-color: rgba(32, 48, 60, 0.1);
+border-top-color: #4eb7f5;
+margin: 0;
+}

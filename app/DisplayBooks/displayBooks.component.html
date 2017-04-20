@@ -1,0 +1,57 @@
+
+
+<div class="dbHomeDiv">
+
+  <span [@navIcon]="filterState" (click)="toggleMenu()" class="showHideBtn">
+    <span><i class="material-icons showHideIcon">keyboard_arrow_left</i></span>
+  </span>
+  <div class="row">
+    <div class="col-md-2 dbFilterDiv" >
+      <div [@FilterBox]="filterState" class="filterOpts" >
+        <i class="searchIcon material-icons">search</i>
+        <input id="dbSearchBox" type="text" placeholder="E.g  book name, price" class="form-control" />
+        <hr class="sb-separator -blue">
+      </div>
+    </div>
+    <hr class="vrBar" />
+    <div class="col-md-10">
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .filterOpts{
+    margin-top: 3%;
+    width:300px;
+  }
+
+  @media (max-width: 1000px)
+  {
+    .showHideBtn
+    {
+      padding-left: 214px !important;
+
+    }
+  }
+
+  .dbFilterDiv {
+    width: 300px;
+    padding: 0;
+  }
+
+  .dbFilterDiv .showHideBtn {
+    float:right;
+  }
+  .showHideBtn {
+    cursor: pointer;
+    padding-left: 258px;
+    margin-top: 39px;
+    display: inline-flex;
+  }
+  .showHideBtn .showHideIcon {
+    color: rgb(91, 193, 175);
+    font-size: 44px;
+  }
+
+</style>

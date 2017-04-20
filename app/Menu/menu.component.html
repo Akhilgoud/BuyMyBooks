@@ -43,7 +43,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href=""> <i class="fa fa-bars"></i> </a>
         <ul class="dropdown-menu" style="width: 184px;right: 0;left: auto;background-color:black;height:125px">
           <li >
-            <a title="Home" href="">
+        <a title="Home"  [routerLink] = "['/']">
               <span >Home</span>
             </a>
           </li>
@@ -87,11 +87,6 @@
   </ul>
   </li>
   </ul></div> -->
-
-
-
-<router-outlet></router-outlet>
-
 </div>
-
 </nav>
+<div><router-outlet></router-outlet> </div>
