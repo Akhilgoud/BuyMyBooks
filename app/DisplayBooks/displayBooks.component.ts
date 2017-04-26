@@ -8,14 +8,14 @@ import {getBooksService} from './displayBooks.service';
     trigger('FilterBox', [
       state('in', style({transform: 'translateX(4%)'})),
       state('out', style({transform: 'translateX(-110%)'})),
-      transition('in => out', animate('400ms ease-out')),
-      transition('out => in', animate('400ms ease-in'))
+      transition('in => out', animate('500ms ease-in-out')),
+      transition('out => in', animate('500ms ease-in-out'))
     ]),
     trigger('navIcon', [
       state('in', style({ transform: 'rotate(0deg)'})),
       state('out', style({ transform: 'rotate(180deg)'})),
-      transition('in => out',  animate('200ms ease-in')),
-      transition('out => in', animate('200ms ease-out'))
+      transition('in => out',  animate('200ms ease-in-out')),
+      transition('out => in', animate('200ms ease-in-out'))
     ])
   ]
 })
