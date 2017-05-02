@@ -3,10 +3,10 @@
   <div class="container">
     <div class ="menuBar-header">
       <a class="menuBar-brand" rel="home" href="#" title="Buy My Books">
-        <span class="aligner">
-          <img class="logo" src="http://demo.eriktailor.com/flatbook-wordpress/demo-1/wp-content/themes/flatbook/assets/img/logo.png" alt="BooksTrade">
+        <span class="aligner" style="font-size: large;color: #ffffff;">
+          <!-- <img class="logo" src="http://demo.eriktailor.com/flatbook-wordpress/demo-1/wp-content/themes/flatbook/assets/img/logo.png" alt="Books Trade"> -->
           <!-- <img class="logo" src="Images/Project/Logo.jpg" alt="Buy My Books"> -->
-
+          Buy My Books
         </span>
       </a>
       <div class="menuBar-tagline">
@@ -28,28 +28,38 @@
   <div  class=" menuBar-body ">
     <ul  class="nav navbar-nav navbar-right" style="float:right !important">
       <li  class="menu-item">
-        <a title="Home" href="">
-         <md-icon style="float:left;font-size: 19px;">home</md-icon><span class="aligner"> Home </span>
+        <a title="Home" [routerLink]= "['/home']" skipLocationChange >
+          <!-- <md-icon style="float:left;font-size: 19px;">home</md-icon> -->
+          <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+          <span class="aligner"> Home </span>
         </a>
       </li>
       <li  class="menu-item">
-        <a class="PostABook" title="Post A Book" [routerLink] = "['/post']" style="">
+        <a class="PostABook"  title="Post A Book" [routerLink]= "['/PostBook']" skipLocationChange>
           <span class="aligner">POST A BOOK </span>
         </a>
       </li>
-
-
+      <li  class="menu-item">
+        <a class="Login"  title="Login" (click)="lgModal.show()">
+          <span class="aligner">Login </span>
+        </a>
+      </li>
       <li class="dropdown" style="float: left;">
         <a class="dropdown-toggle" data-toggle="dropdown" href=""> <i class="fa fa-bars"></i> </a>
         <ul class="dropdown-menu" style="width: 184px;right: 0;left: auto;background-color:black;height:125px">
           <li >
-        <a title="Home"  [routerLink] = "['/']">
+            <a title="Home" [routerLink]= "['/home']" skipLocationChange>
               <span >Home</span>
             </a>
           </li>
           <li >
-            <a  title="Post A Book" href="" >
+            <a  title="Post A Book" [routerLink]= "['/PostBook']" skipLocationChange>
               <span >POST A BOOK  </span>
+            </a>
+          </li>
+          <li >
+            <a  title="Login" [routerLink]= "['/Login']" skipLocationChange>
+              <span >Login</span>
             </a>
           </li>
         </ul>
@@ -57,36 +67,53 @@
     </ul>
   </div>
   <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#onepage-nav">
-
-                  <i class="fa fa-bars"></i>
-
-              </button>
-  <div id="onepage-nav" class="navbar-collapse collapse in"><ul id="primary-menu" class="nav navbar-nav navbar-right"><li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-669 current_page_item menu-item-867 "><a title="Home" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/"><span class="aligner">Home</span></a></li>
-  <li id="menu-item-860" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-860"><a title="Features" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#features"><span class="aligner">Features</span></a></li>
-  <li id="menu-item-861" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-861"><a title="Videos" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#videos"><span class="aligner">Videos</span></a></li>
-  <li id="menu-item-862" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-862"><a title="Samples" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#samples"><span class="aligner">Samples</span></a></li>
-  <li id="menu-item-863" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-863"><a title="Pricing" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#pricing"><span class="aligner">Pricing</span></a></li>
-  <li id="menu-item-864" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-864"><a title="About" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#author"><span class="aligner">About</span></a></li>
-  <li id="menu-item-858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-858 dropdown"><a title="Pages" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true"><span class="aligner">Pages <span class="caret"></span></span></a>
-  <ul role="menu" class=" dropdown-menu">
-  	<li id="menu-item-868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a title="Blog" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/"><span class="aligner">Blog</span></a></li>
-  	<li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-865"><a title="Single Post" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/standard-post-format-example/"><span class="aligner">Single Post</span></a></li>
-  	<li id="menu-item-859" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-859"><a title="404 Error" href="404-error.php"><span class="aligner">404 Error</span></a></li>
-  	<li id="menu-item-869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-869"><a title="Elements" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/elements/"><span class="aligner">Elements</span></a></li>
-  	<li id="menu-item-866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-866"><a title="Contact Us" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/contact-us/"><span class="aligner">Contact Us</span></a></li>
-  </ul>
-  </li>
-  <li id="menu-item-933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-933 dropdown"><a title="Blog" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true"><span class="aligner">Blog <span class="caret"></span></span></a>
-  <ul role="menu" class=" dropdown-menu">
-  	<li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-934"><a title="Gallery post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/gallery-post-format-example/"><span class="aligner">Gallery post format example</span></a></li>
-  	<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-935"><a title="Quote post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/quote-post-format-example/"><span class="aligner">Quote post format example</span></a></li>
-  	<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-936"><a title="Link post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/link-post-format-example/"><span class="aligner">Link post format example</span></a></li>
-  	<li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-937"><a title="Image post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/image-post-format-example/"><span class="aligner">Image post format example</span></a></li>
-  	<li id="menu-item-938" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-938"><a title="Video post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/video-post-format-example/"><span class="aligner">Video post format example</span></a></li>
-  	<li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-939"><a title="Standard post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/standard-post-format-example/"><span class="aligner">Standard post format example</span></a></li>
-  </ul>
-  </li>
-  </ul></div> -->
+  <i class="fa fa-bars"></i>
+</button>
+<div id="onepage-nav" class="navbar-collapse collapse in"><ul id="primary-menu" class="nav navbar-nav navbar-right"><li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-669 current_page_item menu-item-867 "><a title="Home" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/"><span class="aligner">Home</span></a></li>
+<li id="menu-item-860" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-860"><a title="Features" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#features"><span class="aligner">Features</span></a></li>
+<li id="menu-item-861" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-861"><a title="Videos" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#videos"><span class="aligner">Videos</span></a></li>
+<li id="menu-item-862" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-862"><a title="Samples" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#samples"><span class="aligner">Samples</span></a></li>
+<li id="menu-item-863" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-863"><a title="Pricing" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#pricing"><span class="aligner">Pricing</span></a></li>
+<li id="menu-item-864" class="scroll-menu-link menu-item menu-item-type-custom menu-item-object-custom menu-item-864"><a title="About" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/#author"><span class="aligner">About</span></a></li>
+<li id="menu-item-858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-858 dropdown"><a title="Pages" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true"><span class="aligner">Pages <span class="caret"></span></span></a>
+<ul role="menu" class=" dropdown-menu">
+<li id="menu-item-868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a title="Blog" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/"><span class="aligner">Blog</span></a></li>
+<li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-865"><a title="Single Post" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/standard-post-format-example/"><span class="aligner">Single Post</span></a></li>
+<li id="menu-item-859" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-859"><a title="404 Error" href="404-error.php"><span class="aligner">404 Error</span></a></li>
+<li id="menu-item-869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-869"><a title="Elements" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/elements/"><span class="aligner">Elements</span></a></li>
+<li id="menu-item-866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-866"><a title="Contact Us" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/contact-us/"><span class="aligner">Contact Us</span></a></li>
+</ul>
+</li>
+<li id="menu-item-933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-933 dropdown"><a title="Blog" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true"><span class="aligner">Blog <span class="caret"></span></span></a>
+<ul role="menu" class=" dropdown-menu">
+<li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-934"><a title="Gallery post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/gallery-post-format-example/"><span class="aligner">Gallery post format example</span></a></li>
+<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-935"><a title="Quote post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/quote-post-format-example/"><span class="aligner">Quote post format example</span></a></li>
+<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-936"><a title="Link post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/link-post-format-example/"><span class="aligner">Link post format example</span></a></li>
+<li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-937"><a title="Image post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/image-post-format-example/"><span class="aligner">Image post format example</span></a></li>
+<li id="menu-item-938" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-938"><a title="Video post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/video-post-format-example/"><span class="aligner">Video post format example</span></a></li>
+<li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-939"><a title="Standard post format example" href="http://demo.eriktailor.com/flatbook-wordpress/demo-1/blog/standard-post-format-example/"><span class="aligner">Standard post format example</span></a></li>
+</ul>
+</li>
+</ul></div> -->
 </div>
 </nav>
-<div><router-outlet></router-outlet> </div>
+
+
+
+<!-- <button class="btn btn-primary" (click)="lgModal.show()">Large modal</button> -->
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Large modal</h4>
+        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
