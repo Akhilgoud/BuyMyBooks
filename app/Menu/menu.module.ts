@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
             PostModule,
             displayBooksModule,
             FormsModule,
-            RouterModule.forRoot([{path:'',component : displayBooksComponent  },{path: 'post' , component : PostComponent }],{useHash : true})],
+            RouterModule.forRoot([{path:'',component : displayBooksComponent },{path: 'post' , component : PostComponent }],{useHash : true})],
   declarations: [
       MenuComponent
   ],
