@@ -13,11 +13,27 @@
         <hr class="sb-separator -blue">
       </div>
     </div>
+
+    <!-- <md-sidenav-container class="example-container">
+      <md-sidenav #sidenav class="example-sidenav">
+        Jolly good!
+      </md-sidenav>
+
+      <div class="example-sidenav-content">
+        <button md-button (click)="sidenav.open()">
+          Open sidenav
+        </button>
+      </div>
+
+    </md-sidenav-container> -->
+
+
+
+
+
+
     <div class="col-md-9">
-      <!-- <pre> {{
-      TotalBooksData | json
-    }}
-  </pre> -->
+
   <span *ngFor="let item of TotalBooksData" >
     <md-card class="displayBooks-card" style="display: inline-grid;">
       <md-card-header>
@@ -47,6 +63,40 @@
 
 
 <style>
+
+  .example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .example-sidenav {
+    padding: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .dbText {
     font-size: large !important;

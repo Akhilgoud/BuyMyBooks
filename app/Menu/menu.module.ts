@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router'
-import { MaterialModule } from '@angular/material';
 import 'hammerjs';
-import { AccordionModule } from 'ng2-bootstrap/accordion';
-import {MdIconModule} from '@angular/material';
 import {MenuComponent} from './menu.component';
-import {PostModule} from '../Post/post.module'
-import {PostComponent} from '../Post/post.component'
-import {displayBooksModule} from '../DisplayBooks/displayBooks.module';
-import {displayBooksComponent} from '../DisplayBooks/displayBooks.component';
 import { FormsModule } from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
+<<<<<<< HEAD
   imports: [MaterialModule,
             AccordionModule,
             MdIconModule,
@@ -18,8 +14,15 @@ import { FormsModule } from '@angular/forms';
             displayBooksModule,
             FormsModule,
             RouterModule.forRoot([{path:'',component : displayBooksComponent },{path: 'post' , component : PostComponent }],{useHash : true})],
+=======
+  imports: [CommonModule,
+    FormsModule,
+    RouterModule,
+    ModalModule.forRoot()
+  ],
+>>>>>>> 76ba3fa8fdaa388e3d91877882de2064369f8804
   declarations: [
-      MenuComponent
+    MenuComponent
   ],
   exports: [MenuComponent]
 })

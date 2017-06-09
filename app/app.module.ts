@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
-import 'hammerjs';
-import { AccordionModule } from 'ng2-bootstrap/accordion';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
-import {MenuModule} from './Menu/menu.module';
 import { FormsModule } from '@angular/forms';
+import {displayBooksRoutingModule} from './DisplayBooks/displayBooks-routing.module';
+import {AppRoutingModule} from './app-routing.module';
+import {MenuModule} from './Menu/menu.module';
+import {displayBooksModule} from './DisplayBooks/displayBooks.module';
+import {PostModule} from './Post/post.module';
+import {LoginModule} from './Login/login.module';
+import { AppComponent } from './app.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule,
     MenuModule,
-    MaterialModule.forRoot(),
-    AccordionModule.forRoot()],
+    displayBooksModule,
+    PostModule,
+    LoginModule,
+    displayBooksRoutingModule,
+    AppRoutingModule
+  ],
   bootstrap: [
     AppComponent
   ],
