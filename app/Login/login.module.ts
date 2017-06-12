@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { RouterModule} from '@angular/router'
 import 'hammerjs';
-import {LoginComponent} from './login.component';
 import { FormsModule } from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import {loginRegService} from './loginReg.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import {LoginComponent} from './login.component';
+
 @NgModule({
   imports: [CommonModule,
     FormsModule,
-    RouterModule
+    ModalModule
   ],
   declarations: [
     LoginComponent
   ],
+  providers: [loginRegService],
   exports: [LoginComponent]
 })
 export class LoginModule {

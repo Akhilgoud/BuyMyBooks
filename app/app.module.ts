@@ -6,7 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {MenuModule} from './Menu/menu.module';
 import {displayBooksModule} from './DisplayBooks/displayBooks.module';
 import {PostModule} from './Post/post.module';
-import {LoginModule} from './Login/login.module';
+// import {LoginModule} from './Login/login.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     MenuModule,
     displayBooksModule,
     PostModule,
-    LoginModule,
+    // LoginModule,
     displayBooksRoutingModule,
     AppRoutingModule
   ],

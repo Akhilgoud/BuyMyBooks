@@ -1,0 +1,24 @@
+
+.validLogin {
+  border-left: 5px solid green;
+}
+
+.invalidLogin {
+  border-left: 5px solid #c52b2b;
+}
+
+
+.tabActive {
+  border-bottom: 2px solid #377337;
+
+}
+
+.loginRegTab {
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.submitActive {
+  border: 1px solid;
+}

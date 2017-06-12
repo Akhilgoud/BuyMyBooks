@@ -22,7 +22,6 @@
     <span>Home</span>
     <span>Post</span>
     <span>Login</span>
-
   </div> -->
 
   <div  class=" menuBar-body ">
@@ -39,8 +38,8 @@
           <span class="aligner">POST A BOOK </span>
         </a>
       </li>
-      <li  class="menu-item">
-        <a class="Login"  title="Login" (click)="lgModal.show()">
+      <li  class="menu-item" style="cursor:pointer">
+        <a class="Login"  title="Login" (click)="openModal(true)">
           <span class="aligner">Login </span>
         </a>
       </li>
@@ -57,8 +56,8 @@
               <span >POST A BOOK  </span>
             </a>
           </li>
-          <li >
-            <a  title="Login" [routerLink]= "['/Login']" skipLocationChange>
+          <li style="cursor:pointer">
+            <a  title="Login" [routerLink]= "['/Login']" skipLocationChange (click)="openModal(true)">
               <span >Login</span>
             </a>
           </li>
@@ -98,22 +97,5 @@
 </div>
 </nav>
 
-
-
 <!-- <button class="btn btn-primary" (click)="lgModal.show()">Large modal</button> -->
-
-<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title pull-left">Large modal</h4>
-        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
+<login-modal #loginRegModal = "loginModal"></login-modal>
