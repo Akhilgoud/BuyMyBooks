@@ -36,7 +36,7 @@
     </div>
 
     <label class = "col-lg-2 control-label"> Type of Book  </label>
-    <div class="form-group"  [class.has-error] = "address.invalid && address.dirty" #address = "ngModel">
+    <div class="form-group" >
       <select class = "col-lg-10 form-control demo" [(ngModel)]="book.type" name="type" (change) = "changeFun(book.type)" required>
         <option default>select a book type ... </option>
         <option value="ALLINONE" >AllInOne</option>
