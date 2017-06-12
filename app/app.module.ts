@@ -8,10 +8,11 @@ import {displayBooksModule} from './DisplayBooks/displayBooks.module';
 import {PostModule} from './Post/post.module';
 import {LoginModule} from './Login/login.module';
 import { AppComponent } from './app.component';
-
+import {HttpModule} from '@angular/http'
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     MenuModule,
     displayBooksModule,

@@ -9,7 +9,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   imports: [CommonModule,
     FormsModule,
     RouterModule,
-    ModalModule.forRoot()
+     ModalModule.forRoot()
   ],
   declarations: [
     MenuComponent

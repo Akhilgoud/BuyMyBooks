@@ -1,63 +1,44 @@
 <div class="container form-style">
   <form #form = "ngForm">
-
-    <div class="form-group" >
       <label class = "col-lg-2 control-label"> College </label>
+    <div class="form-group" [class.has-error] = "college.invalid && college.dirty">
       <input class="form-control demo" #college = "ngModel" type="text"  name="college" [(ngModel)]="book.college" required/> <br><br>
     </div>
-    <div *ngIf="college.invalid && college.dirty" class= "alert alert-danger"> college is required
+
+    <label class = "col-lg-2 control-label" > Description </label>
+      <div class="form-group" [class.has-error] = "description.invalid && description.dirty">
+      <input class="form-control demo"  #description = "ngModel" type="text"  name="description" [(ngModel)]="book.description" required/> <br><br>
     </div>
 
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Description </label>
-      <input class="form-control demo" #description = "ngModel" type="text"  name="description" [(ngModel)]="book.description" required/> <br><br>
-    </div>
-    <div *ngIf="description.invalid && description.dirty" class= "alert alert-danger"> description is required
-    </div>
-
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Edition </label>
+    <label class = "col-lg-2 control-label"> Edition </label>
+    <div class="form-group" [class.has-error] = "edition.invalid && edition.dirty" >
       <input class="form-control demo" #edition = "ngModel" type="text"  name="edition" [(ngModel)]="book.edition" required/> <br><br>
     </div>
-    <div *ngIf="edition.invalid && edition.dirty" class= "alert alert-danger"> edition is required
+
+    <label class = "col-lg-2 control-label"> Phone Number  </label>
+    <div class="form-group " [class.has-error] = "phno.invalid && phno.dirty" >
+      <input class="form-control demo" #phno = "ngModel"  type="text"  name="phno" [(ngModel)]="book.phno" required/> <br><br>
     </div>
 
+    <label class = "col-lg-2 control-label"> Pin Code  </label>
+    <div class="form-group" [class.has-error] = "pincode.invalid && pincode.dirty">
+      <input class="form-control demo" #pincode = "ngModel"  type="text"  name="pincode" [(ngModel)]="book.pincode" required/> <br><br>
+    </div>
+
+    <label class = "col-lg-2 control-label"> Price  </label>
+    <div class="form-group" [class.has-error] = "price.invalid && price.dirty">
+      <input class="form-control demo" #price = "ngModel"  type="text"  name="price" [(ngModel)]="book.price" required/> <br><br>
+    </div>
+
+    <label class = "col-lg-2 control-label"> Address  </label>
     <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Phone Number  </label>
-      <input class="form-control demo" #phno = "ngModel" type="text"  name="phno" [(ngModel)]="book.phno" required/> <br><br>
-    </div>
-    <div *ngIf="phno.invalid && phno.dirty" class= "alert alert-danger"> phone number is required
+      <input class="form-control demo" [class.has-error] = "address.invalid && address.dirty" #address = "ngModel" type="text"  name="address" [(ngModel)]="book.address" required/> <br><br>
     </div>
 
-
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Pin Code  </label>
-      <input class="form-control demo" #pincode = "ngModel" type="text"  name="pincode" [(ngModel)]="book.pincode" required/> <br><br>
-    </div>
-    <div *ngIf="pincode.invalid && pincode.dirty" class= "alert alert-danger"> pincode is required
-    </div>
-
-
-
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Price  </label>
-      <input class="form-control demo" #price = "ngModel" type="text"  name="price" [(ngModel)]="book.price" required/> <br><br>
-    </div>
-    <div *ngIf="price.invalid && price.dirty" class= "alert alert-danger"> price is required
-    </div>
-
-
-
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Address  </label>
-      <input class="form-control demo" #address = "ngModel" type="text"  name="address" [(ngModel)]="book.address" required/> <br><br>
-    </div>
-    <div *ngIf="address.invalid && address.dirty" class= "alert alert-danger"> address is required
-    </div>
-
-    <div class="form-group" >
-      <label class = "col-lg-2 control-label"> Type of Book  </label>
+    <label class = "col-lg-2 control-label"> Type of Book  </label>
+    <div class="form-group"  [class.has-error] = "address.invalid && address.dirty" #address = "ngModel">
       <select class = "col-lg-10 form-control demo" [(ngModel)]="book.type" name="type" (change) = "changeFun(book.type)" required>
+        <option default>select a book type ... </option>
         <option value="ALLINONE" >AllInOne</option>
         <option value="BOOK">Book</option>
       </select><br><br>
@@ -79,6 +60,6 @@
         <label class = "col-lg-2 control-label">  Select Image </label>
         <input class = "col-lg-10 form-control demo" #fileInput type="file" required/><br><br>
       </div>
-      <input type="submit" name = "post" value="post" (click) ="submitPost()" [disabled]="form.invalid"/>
+      <input type="submit" class="btn btn-success" name = "post" value="post" (click) ="submitPost()" [disabled]="form.invalid"/>
     </form>
   </div>
